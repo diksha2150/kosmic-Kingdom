@@ -38,11 +38,7 @@ header {
 .book-now {
   object-fit: contain;
 }
-/* @media (max-width: 557px) {
-  .yellow {
-    height: 100%;
-  }
-} */
+
 @media only screen and (max-width: 768px) {
   .header-left {
     display: none;
@@ -131,16 +127,6 @@ header {
     color: white;
   }
 }
-/* 
-@media (max-width: 1199px) {
-  .space-ship {
-    position: absolute;
-    top: 68% !important;
-    right: 7%;
-    width: 100px;
-    height: 100px;
-  }
-} */
 
 @media (max-width: 1162px) {
   .marvel {
@@ -153,13 +139,6 @@ header {
     height: 120px;
   }
 
-  /* .girls-circle {
-    width: 150px !important;
-    height: 150px !important;
-    position: fixed;
-    top: 0%;
-    right: 3%;
-  } */
   .play-circle {
     position: absolute;
     top: 48%;
@@ -213,7 +192,7 @@ header {
     top: 28% !important;
   }
   .home-text {
-    font-size: 30px !important;
+    font-size: clamp(30px, 2vw, 30px) !important;
     font-weight: 400;
   }
 }
@@ -225,7 +204,7 @@ header {
     display: none;
   }
   .home-text {
-    font-size: 40px !important ;
+    font-size: clamp(30px, 2vw, 30px) !important;
     line-height: normal;
     position: absolute;
     top: 25% !important;
@@ -251,7 +230,10 @@ header {
     display: none;
   }
   .space-ship {
-    display: none;
+    width: clamp(70px, 1vw, 90px);
+    position: absolute;
+    top: 60% !important;
+    right: 7%;
   }
   .book-now {
     display: none;
@@ -262,7 +244,8 @@ header {
     object-fit: contain;
   }
   .home-text {
-    font-size: 17px !important ;
+    font-size: 18px !important ;
+    font-weight: 600;
     line-height: normal;
     position: absolute;
     top: 40% !important;
@@ -277,7 +260,7 @@ header {
     height: 40px !important;
     z-index: 1;
   }
-} /* .parent-card-wrap { padding: 5%; background: rebeccapurple; } */
+}
 .main {
   padding: 5%;
 }
@@ -959,6 +942,19 @@ header {
   .log {
     overflow: hidden;
     width: 185px;
+    max-height: 120px;
     object-fit: contain;
+  }
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 180px;
+  }
+  .small-ptn {
+    column-gap: 0px;
+  }
+  .gp-parent {
+    overflow-y: hidden;
   }
 }
